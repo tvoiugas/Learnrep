@@ -1,0 +1,17 @@
+{% extends 'page/_base.html' %}
+
+{% block title %}Продукты{% endblock title %}
+
+{% block content %}
+	<div class="container bg-light">
+		<h1 class="text-center">Products</h1>
+		<div class="card" style="width: 18rem;">
+		  <h5 class="card-title text-center">{{phone.title}}</h5>
+		  <img src="https://www.tradeinn.com/f/13782/137821852/apple-iphone-12-pro-max-6gb-256gb-6.7.jpg" class="card-img-top" alt="...">
+		  <div class="card-body">
+		    <p class="card-text text-center">{{phone.desc}}</p>
+		    <a href="{% url 'phone' %}" class="card-link btn btn-primary">View</a>
+		  </div>
+		</div>
+	</div>
+{% endblock content %}
