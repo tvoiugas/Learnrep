@@ -1,0 +1,51 @@
+
+body {
+	background-color: black;
+	font-family: 'Bangers', cursive;
+	color: orange;
+}
+
+#main {
+	border: 1px solid black;
+	border-radius: 25px;
+}
+
+#cards {
+	display: block;
+	background-color: transparent;
+	max-width: 10rem;
+}
+
+#pag-link {
+	border: 1px solid orange;
+	color: orange;
+}
+
+#main-detail {
+	/*border: 1px solid white;*/
+	margin-top: 50px;
+}
+#info-title {
+	margin-top: 80px;
+}
+
+table, td, th, tr {
+	border: 1px solid orange;
+}
+
+tr:hover {background-color: orange; color: white;}
+
+#test {
+	/*border: 1px solid white;*/
+}
+
+#title {
+	font-size: 30px;
+}
+
+@media (max-width: 650px) {
+	#cards {
+		background-color: transparent;
+		max-width: 15rem;
+	}
+}

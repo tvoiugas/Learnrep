@@ -1,17 +1,87 @@
 {% extends 'page/_base.html' %}
+{% load static %}
 
 {% block title %}Продукты{% endblock title %}
 
 {% block content %}
-	<div class="container bg-light">
-		<h1 class="text-center">Products</h1>
-		<div class="card" style="width: 18rem;">
-		  <h5 class="card-title text-center">{{phone.title}}</h5>
-		  <img src="https://www.tradeinn.com/f/13782/137821852/apple-iphone-12-pro-max-6gb-256gb-6.7.jpg" class="card-img-top" alt="...">
-		  <div class="card-body">
-		    <p class="card-text text-center">{{phone.desc}}</p>
-		    <a href="{% url 'phone' %}" class="card-link btn btn-primary">View</a>
-		  </div>
+	<div class="container" style="background-color: transparent;" id="main">
+		<div class="row">
+			<h1 class="text-center">Products</h1>
+			<div id="cards" class="card text-center" style="display: block;">
+			  <a href="{% url 'phone' %}"><img src="{% static 'page/images/phone12.png' %}" class="card-img-top" alt=""></a>
+			  <h5 class="card-title">{{phone12.title}}</h5>
+			  <div class="card-body">
+			    <p class="card-text">{{phone12.desc}}</p>
+			  </div>
+			</div>
+			<div id="cards" class="card text-center">
+			  <a href="{% url 'phone' %}"><img src="{% static 'page/images/phone13.png' %}" class="card-img-top" alt=""></a>
+			  <h5 class="card-title">{{phone13.title}}</h5>
+			  <div class="card-body">
+			    <p class="card-text">{{phone13.desc}}</p>
+			  </div>
+			</div>
+			<div id="cards" class="card text-center">
+			  <a href="{% url 'phone' %}"><img src="{% static 'page/images/vacuum_cleaner.png' %}" class="card-img-top" alt=""></a>
+			  <h5 class="card-title text-center">{{vacuum_cleaner.title}}</h5>
+			  <div class="card-body">
+			    <p class="card-text text-center">{{vacuum_cleaner.desc}}</p>
+			  </div>
+			</div>
+			<div id="cards" class="card text-center">
+			  <a href="{% url 'phone' %}"><img src="{% static 'page/images/microwave.png' %}" class="card-img-top" alt=""></a>
+			  <h5 class="card-title text-center">{{microwave.title}}</h5>
+			  <div class="card-body">
+			    <p class="card-text text-center">{{microwave.desc}}</p>
+			  </div>
+			</div>
+			<div id="cards" class="card text-center">
+			  <a href="{% url 'phone' %}"><img src="{% static 'page/images/drone.png' %}" class="card-img-top" alt=""></a>
+			  <h5 class="card-title text-center">{{drone.title}}</h5>
+			  <div class="card-body">
+			    <p class="card-text text-center">{{drone.desc}}</p>
+			  </div>
+			</div>
+			<div id="cards" class="card text-center">
+			  <a href="{% url 'phone' %}"><img src="{% static 'page/images/spinner.png' %}" class="card-img-top" alt=""></a>
+			  <h5 class="card-title text-center">{{spinner.title}}</h5>
+			  <div class="card-body">
+			    <p class="card-text text-center">{{spinner.desc}}</p>
+			  </div>
+			</div>
+			<div id="cards" class="card text-center">
+			  <a href="{% url 'phone' %}"><img src="{% static 'page/images/samsung1.png' %}" class="card-img-top" alt=""></a>
+			  <h5 class="card-title text-center">{{samsung1.title}}</h5>
+			  <div class="card-body">
+			    <p class="card-text text-center">{{samsung1.desc}}</p>
+			  </div>
+			</div>
+			<div id="cards" class="card text-center">
+			  <a href="{% url 'phone' %}"><img src="{% static 'page/images/iphone11.png' %}" class="card-img-top" alt=""></a>
+			  <h5 class="card-title text-center">{{iphone11.title}}</h5>
+			  <div class="card-body">
+			    <p class="card-text text-center">{{iphone11.desc}}</p>
+			  </div>
+			</div>
+			<nav aria-label="Page navigation example">
+			  <ul class="pagination justify-content-center">
+			    <li class="page-item">
+			      <a id="pag-link" class="page-link bg-dark" href="#" aria-label="Previous">
+			        <span aria-hidden="true">&laquo;</span>
+			        <span class="sr-only"></span>
+			      </a>
+			    </li>
+			    <li  id="test"  class="page-item"><a id="pag-link" class="page-link bg-dark" href="#">1</a></li>
+			    <li class="page-item"><a id="pag-link" class="page-link bg-dark" href="#">2</a></li>
+			    <li class="page-item"><a id="pag-link" class="page-link bg-dark" href="#">3</a></li>
+			    <li class="page-item">
+			      <a id="pag-link" class="page-link bg-dark" href="#" aria-label="Next">
+			        <span aria-hidden="true">&raquo;</span>
+			        <span class="sr-only"></span>
+			      </a>
+			    </li>
+			  </ul>
+			</nav>
 		</div>
 	</div>
 {% endblock content %}

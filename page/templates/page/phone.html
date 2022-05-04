@@ -1,0 +1,66 @@
+{% extends 'page/_base.html' %}
+{% load static %}
+
+{% block title %}Iphone 12{% endblock title %}
+
+{% block content %}
+
+<div class="container">
+	<div id="main-detail" class="row align-items-start">
+		<div id="image" class="col-3">
+			<!-- <img src="{% static 'page/images/phone12.png' %}" width="350"> -->
+			<div id="phone-images" class="carousel slide" data-ride="carousel">
+			  <ol class="carousel-indicators">
+			    <li data-target="#phone-images" data-slide-to="0" class="active"></li>
+			    <li data-target="#phone-images" data-slide-to="1"></li>
+			    <li data-target="#phone-images" data-slide-to="2"></li>
+			  </ol>
+			  <div class="carousel-inner">
+			    <div class="carousel-item active">
+			      <img class="d-block w-100" src="{% static 'page/images/phone12.png' %}" alt="First slide">
+			    </div>
+			    <div class="carousel-item">
+			      <img class="d-block w-100" src="{% static 'page/images/phone12-2.png' %}" alt="Second slide">
+			    </div>
+			    <div class="carousel-item">
+			      <img class="d-block w-100" src="{% static 'page/images/phone12-3.png' %}" alt="Third slide">
+			    </div>
+			  </div>
+			  <a class="carousel-control-prev" href="#phone-images" role="button" data-slide="prev">
+			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			    <span class="sr-only"></span>
+			  </a>
+			  <a class="carousel-control-next" href="#phone-images" role="button" data-slide="next">
+			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			    <span class="sr-only"></span>
+			  </a>
+			</div>
+		</div>
+		<div class="col-4">
+			<h3 id='title'>{{phone.title}}</h3>
+			<p>{{phone.desc}}</p>
+			<table class="table table-bordered" style="color: orange; font-family: sans-serif;">
+				<h5 id="info-title">Characteristics</h5>
+				<tbody>
+					<tr>
+						<th scope="row">Price</th>
+						<td>{{phone.price}}</td>
+					</tr>
+					<tr>
+						<th scope="row">Color</th>
+						<td>{{phone.color}}</td>
+					</tr>
+					<tr>
+						<th scope="row">Screen</th>
+						<td>{{phone.screen}}</td>
+					</tr>
+				</thead>
+			</table>
+		</div>
+		<div class="col-4" style="padding-top: 266px">
+			<a href="#" class="btn btn-warning">Add to cart</a>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}
